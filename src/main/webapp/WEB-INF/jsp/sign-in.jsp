@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hello Spring MVC</title>
+<title>sign-in</title>
 </head>
 
 <body>
