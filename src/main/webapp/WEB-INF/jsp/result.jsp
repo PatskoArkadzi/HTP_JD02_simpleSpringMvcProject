@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>${role!=null?'Hello '.concat(role.roleName):'Пользователя с таким логином не
+	<h1>${role!=null?'Hello '.concat(role.roleName):'Такого пользователя не
 		существует'}</h1>
 </body>
 </html>
