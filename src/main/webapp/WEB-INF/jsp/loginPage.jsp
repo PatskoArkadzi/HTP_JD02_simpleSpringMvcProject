@@ -9,13 +9,13 @@
 </head>
 
 <body>
-	<form:form method="post" action="/checkUser">
+	<form:form method="post" commandName="user" action="hello">
 		<fieldset>
-			<form:label path="name">username</form:label>
-			<form:input path="name" />
+			<form:label path="login">login</form:label>
+			<form:input path="login" />
 
-			<form:label path="pass">userpass</form:label>
-			<form:password path="pass" />
+			<form:label path="password">password</form:label>
+			<form:password path="password" />
 		</fieldset>
 		<input type="submit" value="login" />
 	</form:form>
