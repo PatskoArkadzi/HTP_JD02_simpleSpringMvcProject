@@ -6,6 +6,7 @@
 <title>start page</title>
 </head>
 <body>
-	<jsp:forward page="/sign-in" />
+	<%-- <jsp:forward page="/sign-in" /> --%>
+	<p>Hello</p>
 </body>
 </html>
