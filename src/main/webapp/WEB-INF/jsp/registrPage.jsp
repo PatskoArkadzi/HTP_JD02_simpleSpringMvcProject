@@ -8,42 +8,48 @@
 <title>login page</title>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+	
 </script>
 </head>
 
 <body>
 	<script type="text/javascript">
-		function doAjax() {
+		function checkLogin() {
+			var data = {
+				login : $('#login').val()
+			};
+			var dataJson = JSON.stringify(data);
+			console.log(typeof (dataJson));
 			$.ajax({
-				url: 'checkPass',
-				data: ({
-					password: $('#password').val()
+				url : 'checkLog',
+				data : ({
+					jsonLogin : dataJson
 				}),
-				success: function(data) {
+				success : function(data) {
 					$('#resultValue').html(data);
 				}
-			})		
+			})
 		}
-		function doAjax2() {
+		function checkPassword() {
 			$.ajax({
-				url: 'checkLog',
-				data: ({
-					login: $('#login').val()
+				url : 'checkPass',
+				data : ({
+					password : $('#password').val()
 				}),
-				success: function(data) {
+				success : function(data) {
 					$('#resultValue').html(data);
 				}
-			})	
+			})
 		}
 	</script>
 	<div id="resultValue"></div>
 	<form:form method="post" action="register">
 		<fieldset>
 			<form:label path="login">login</form:label>
-			<form:input path="login" onkeyup="doAjax2()"/>
+			<form:input path="login" onkeyup="checkLogin()" />
 
-			<form:label path="password" >password</form:label>
-			<form:password path="password" onkeyup="doAjax()"/>
+			<form:label path="password">password</form:label>
+			<form:password path="password" onkeyup="checkPassword()" />
 		</fieldset>
 		<input type="submit" value="register" />
 	</form:form>
