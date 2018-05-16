@@ -8,7 +8,14 @@
 </head>
 
 <body>
-	<h1>${role!=null?'Hello '.concat(role.roleName):'Такого пользователя не
-		существует'}</h1>
+	<c:choose>
+		<c:when test="${role!=null}">
+			<p>Hello ${role.roleName} '${user.login}'</p>
+			<p>your password is '${user.password}'</p>
+		</c:when>
+		<c:otherwise>
+			<p>This user isn't exist</p>
+		</c:otherwise>
+	</c:choose>
 </body>
 </html>

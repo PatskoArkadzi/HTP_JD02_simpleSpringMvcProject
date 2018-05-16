@@ -14,7 +14,7 @@ import by.htp.springmvc.dao.impl.UserDaoHibernateImpl;
 import by.htp.springmvc.domain.User;
 
 @Controller
-@RequestMapping(value = "/login")
+@RequestMapping(value = "/main")
 public class MainServlet {
 	@RequestMapping(value = "/newUser", method = RequestMethod.GET)
 	public ModelAndView newUser(ModelMap model) {
@@ -36,11 +36,11 @@ public class MainServlet {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView common(ModelMap model) {
-		return new ModelAndView("user", "command", new User());
+	public void common(ModelMap model) {
+		System.out.println("common");
 	}
 
-	@RequestMapping(value = "/checkUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public void user(ModelMap model) {
 		System.out.println("user");
 	}
