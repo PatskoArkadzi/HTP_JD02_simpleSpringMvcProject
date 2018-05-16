@@ -8,7 +8,6 @@
 <title>login page</title>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
-	
 </script>
 </head>
 
